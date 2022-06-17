@@ -1,0 +1,13 @@
+<div class="container">
+
+  <app-profile-overview></app-profile-overview>
+  
+  <div>
+
+    <div *ngFor="let post of feeds$ | async as feeds">
+      <app-feed-entry [feed]="post"></app-feed-entry>
+    </div>
+    
+  </div>
+  <app-feed-suggestions></app-feed-suggestions>
+</div>
